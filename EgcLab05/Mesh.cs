@@ -4,8 +4,8 @@ namespace Egc;
 
 /// <summary>
 /// O formă geometrică desenată în stilul OpenGL modern: date în VBO, indici în EBO,
-/// descrierea formatului în VAO. Este clasa Triangle din laboratorul 2, generalizată:
-/// vârfurile și indicii nu mai sunt scrise în clasă, ci primiți ca parametri.
+/// descrierea formatului în VAO. Neschimbată față de laboratorul 4, cu o singură excepție:
+/// proprietatea TriangleCount (afișată în consolă, tasta I).
 /// Formatul unui vârf NU s-a schimbat: 6 float = x, y, z, r, g, b.
 /// </summary>
 public sealed class Mesh : IDisposable
@@ -30,6 +30,9 @@ public sealed class Mesh : IDisposable
 
     /// <summary>Numărul de vârfuri.</summary>
     public int VertexCount => Vertices.Length / FloatsPerVertex;
+
+    /// <summary>NOU (laboratorul 5): numărul de triunghiuri (0 pentru linii sau puncte).</summary>
+    public int TriangleCount => Primitive == PrimitiveType.Triangles ? Indices.Length / 3 : 0;
 
     private readonly int _vao;   // Vertex Array Object   – "cum se citesc datele"
     private readonly int _vbo;   // Vertex Buffer Object  – "datele vârfurilor"

@@ -5,7 +5,7 @@ namespace Egc;
 
 /// <summary>
 /// Un program shader OpenGL: vertex shader + fragment shader, compilate și legate (link).
-/// Neschimbată față de laboratorul 3.
+/// Neschimbată față de laboratorul 4.
 /// </summary>
 public sealed class Shader : IDisposable
 {

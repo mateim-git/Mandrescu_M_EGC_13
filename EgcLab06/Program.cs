@@ -1,3 +1,4 @@
+//matei.mandrescu@student.usv.ro
 using Egc;
 
 // Program.cs conține DOAR inițializarea aplicației:
